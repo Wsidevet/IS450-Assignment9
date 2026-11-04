@@ -91,6 +91,36 @@ def password_strength(user_pass: str) -> str:
 # ----------------------------------------------------------------------------------------------------------------------
 
 
+# ----------------------------------------------------------------------------------------------------------------------
+# ASSIGNMENT 9 AI FEATURE
+
+# Suggest Character Types The User Can Add To Their Password
+def missing_character_suggestions(user_pass: str) -> None:
+    suggestions = []
+
+    if not has_uppercase(user_pass):
+        suggestions.append("Add uppercase letters.")
+
+    if not has_lowercase(user_pass):
+        suggestions.append("Add lowercase letters.")
+
+    if not has_numbers(user_pass):
+        suggestions.append("Add numbers.")
+
+    if not has_symbols(user_pass):
+        suggestions.append("Add symbols.")
+
+    print("\nPassword Improvement Suggestions:")
+    if suggestions:
+        for suggestion in suggestions:
+            print(f"- {suggestion}")
+    else:
+        print("No character types are missing from your password.")
+
+# ASSIGNMENT 9 AI FEATURE ENDS HERE
+# ----------------------------------------------------------------------------------------------------------------------
+
+
 # Function That Contains The Code To Check The Password
 def check_password(user_pass: str)-> str:
     # Calls Functions To Get Lenght And Check Characters For Type
@@ -152,6 +182,9 @@ def main()-> None:
         print(f"\nYour Password Is {len(user_pass)} Characters Long")
         print(f"The Time It Will Take To Crack Your Password In 2026 is: {time_to_crack}")
         print(f"Your Password Strength Is: {strength}")
+
+        # Show Suggestions For Missing Character Types (Assignment 9 AI Feature)
+        missing_character_suggestions(user_pass=user_pass)
         print("-----------------------------------------------------------------------------------")
 
         cont = input("\nWould You Like To Check Another Password?(Y/N): ")
@@ -165,3 +198,4 @@ def main()-> None:
 
 if __name__ == "__main__":
     main()
+    
