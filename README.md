@@ -22,23 +22,39 @@ The initial version of the program includes the following features:
 6. Allows the user to check multiple passwords using a loop.
 7. Allows the user to exit the program when finished.
 
+### Manual Feature - ASSIGNMENT 9
+Feature name: Password Generator
+
+Purpose: Will generate a secure password that is 12 characters or longer.
+
+Expected behavior: Asks user for length of password (12 or more chars). And then generate a random string from the character lists of that length.
+
+Two test cases:
+
+    Test Case 1
+    - Input: 12
+    - Expected result: The program generates a random password that is exactly 12 characters long. (Example: "The Generated Password is: 6X!mB6R2GHcr")
+    Test Case 2
+    - Input: 8
+    - Expected result: "Length of password has to be 12 or more characters. Please select new length:"
+
 ### AI TOOL USED:
 
 ChatGPT (OpenAI)
 Version 6
 
-### AI Assistance:
+### AI Assistance (ASSIGNMENT 8):
 
 I asked ChatGPT to write code for a password strength rating feature that I could add to my existing program. ChatGPT suggested a new function that uses the password's length and the number of character types it contains.
 
-### New Or Modified Features
+### New Or Modified Features (ASSIGNMENT 8)
 
 1. Added a password_strength() function that rates passwords as WEAK, MODERATE, or STRONG.
 2. The function reuses the existing checks for uppercase letters, lowercase letters, numbers, and symbols.
 3. Updated the program's output to show the strength rating alongside the estimated cracking time.
 4. Simplified the prompt for checking another password and adjusted the output formatting.
 
-### Evaluation of AI Output
+### Evaluation of AI Output (ASSIGNMENT 8)
 
 I accepted ChatGPT's suggested password strength function because it was easy to understand and fit into my original program without replacing it. I added the function to main.py and updated main() to display the result. The ratings are based only on length and character variety, so they are simple guidelines rather than a complete measure of password security.
 
