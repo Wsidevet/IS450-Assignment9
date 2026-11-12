@@ -22,7 +22,9 @@ The initial version of the program includes the following features:
 6. Allows the user to check multiple passwords using a loop.
 7. Allows the user to exit the program when finished.
 
+
 ### Manual Feature - ASSIGNMENT 9
+
 Feature name: Password Generator
 
 Purpose: Will generate a secure password that is 12 characters or longer.
@@ -37,6 +39,26 @@ Two test cases:
     Test Case 2
     - Input: 8
     - Expected result: "Length of password has to be 12 or more characters. Please select new length:"
+    
+### AI Feature - ASSIGNMENT 9
+
+**Feature name:** Missing Character Suggestions
+
+**Purpose:** Help users improve their passwords by identifying missing character types.
+
+**Expected behavior:** After the user enters a password, the program checks for uppercase letters, lowercase letters, numbers, and symbols. It displays suggestions for any character types that are missing. If all four types are present, the program says no character types are missing.
+
+**Test Case 1**
+- Input: `password123`
+- Expected result: The program suggests adding uppercase letters and symbols.
+
+**Test Case 2**
+- Input: `PASSWORD123!`
+- Expected result: The program suggests adding lowercase letters.
+
+**Test Case 3**
+- Input: `Password123!`
+- Expected result: The program says no character types are missing.
 
 ### AI TOOL USED:
 
