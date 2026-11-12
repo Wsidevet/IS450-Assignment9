@@ -22,6 +22,16 @@ The initial version of the program includes the following features:
 6. Allows the user to check multiple passwords using a loop.
 7. Allows the user to exit the program when finished.
 
+### Feature Development Comparison
+
+**Manual Feature:** I created a Random Password Generator that allows users to generate passwords that are 12 characters or longer. I wrote this feature myself without using generative AI. I used the existing character lists in my program and Python's random module to generate passwords based on the length entered by the user.
+
+**AI Feature:** I used ChatGPT to create a Missing Character Suggestions feature. This feature checks the user's password for uppercase letters, lowercase letters, numbers, and symbols. If any character types are missing, the program displays suggestions for improving the password.
+
+The AI-generated code worked correctly on the first attempt and passed all three of my test cases. I reviewed the code and accepted the implementation without making any major changes because it reused my existing functions and did not interfere with the original program.
+
+I believe that the manual approach gave me greater confidence because I understood exactly how the code worked since I wrote it myself and if I needed to make any changes in the future I would have an easier time doing so rather than if the code was made by AI and then having to understand what it is doing first.
+
 
 ### Manual Feature - ASSIGNMENT 9
 
