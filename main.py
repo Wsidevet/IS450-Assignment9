@@ -1,6 +1,9 @@
 # Name: Garry Singh
 # Assignment 8: Git Development With AI
 
+#Imports
+import random
+
 # Store All Of The Characters Than Can Exist In Different Lists
 uppercase_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 lowercase_letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -54,7 +57,7 @@ def has_symbols(user_pass:str)-> bool:
     return result
 
 # ----------------------------------------------------------------------------------------------------------------------
-# AI GENERATED CODE
+# AI GENERATED CODE (ASSIGNMENT 8)
 
 # Determine Password Strength Based On Length And Character Types
 def password_strength(user_pass: str) -> str:
@@ -89,6 +92,35 @@ def password_strength(user_pass: str) -> str:
 
 # AI GENERATED CODE ENDS HERE
 # ----------------------------------------------------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------------------------------------------------
+# ASSIGNMENT 9 MANUAL FEATURE
+
+# Generate a random password that is 12 or more characters long
+def password_generator()->None:
+
+    gen_pass = ""
+    pass_len = int(input("\nHow Long Would You Like The New Password To Be? (!MUST BE 12 Characters or More): "))
+    while pass_len < 12:
+       pass_len = int(input("\nLength of password has to be 12 or more characters. Please select new length: "))
+    
+    # Takes all the lists of characters and puts them into one so that they can chosen from randomly
+
+    char_lists = [uppercase_letters,lowercase_letters,numbers_list,symbols_list]
+    
+    # Generate the random password
+    for i in range(0,pass_len):
+        x = random.choice(char_lists)
+        gen_pass += random.choice(x)
+
+    # Print the password
+    print(f"\nThe Generated Password is: {gen_pass}")
+
+# MANUAL FEATURE ENDS HERE
+# ----------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -165,6 +197,7 @@ def main()-> None:
     print("\nHow Long Will It Take For Modern Hardware To Crack Your Password In 2026?")
     keep_running = True
     
+
     while keep_running:
         
         
@@ -191,9 +224,18 @@ def main()-> None:
 
         if cont.strip().lower() not in ["y", "yes"]:
             keep_running = False
-    
+
+    # ----------------------------------
+    # ASSIGNMENT 9 MANUAL FEATURE
+    gen_pass_question = input("\nWould You Like To Generate A Secure Password(Y/N): ")
+
+    if gen_pass_question.strip().lower() in ["y", "yes"]:    
+        password_generator()
+    # ----------------------------------
+
+
     print("\nThank You For Using This Program\n")
-            
+    
 
 
 if __name__ == "__main__":

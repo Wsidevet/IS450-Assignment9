@@ -22,6 +22,24 @@ The initial version of the program includes the following features:
 6. Allows the user to check multiple passwords using a loop.
 7. Allows the user to exit the program when finished.
 
+
+### Manual Feature - ASSIGNMENT 9
+
+Feature name: Password Generator
+
+Purpose: Will generate a secure password that is 12 characters or longer.
+
+Expected behavior: Asks user for length of password (12 or more chars). And then generate a random string from the character lists of that length.
+
+Two test cases:
+
+    Test Case 1
+    - Input: 12
+    - Expected result: The program generates a random password that is exactly 12 characters long. (Example: "The Generated Password is: 6X!mB6R2GHcr")
+    Test Case 2
+    - Input: 8
+    - Expected result: "Length of password has to be 12 or more characters. Please select new length:"
+    
 ### AI Feature - ASSIGNMENT 9
 
 **Feature name:** Missing Character Suggestions
